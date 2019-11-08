@@ -48,7 +48,7 @@ def findscore():
 	db = client.student_scores
 	getid = request.args.get('id')
 	docs = db.scores.find_one({'id':int(getid)})
-	ret = {'id':docs['id'], 'quiz 1':docs['quiz1'], 'quiz 2':docs['quiz2'], 'quiz 3':docs['quiz3'], 'quiz 4':docs['quiz4'], 'quiz5':docs['quiz 5'], 'sum':docs['sum']}
+	ret = {'id':docs['id'], 'quiz1':docs['quiz1'], 'quiz2':docs['quiz2'], 'quiz3':docs['quiz3'], 'quiz4':docs['quiz4'], 'quiz5':docs['quiz5'], 'sum':docs['sum']}
 	r = dict()
 	r['data'] = ret
 	return jsonify(r)
